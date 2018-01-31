@@ -9,13 +9,22 @@ class COCOBBackprop(C.UserLearner):
     """
     
     def __init__(self, alpha=100, eps=1e-8):
+        """
+        Initialize algorithm
+        :param alpha: int, number of vocabulary
+        :param eps: float, Starting amount of money 
+        """
         self._alpha = alpha
         self.eps = eps
-        defaults = dict(alpha=alpha, epsilon=epsilon)
+        defaults = dict(alpha=alpha, eps=eps)
         super(COCOBBackprop, self).__init__(params, defaults)
         
     def step(self, closure=None):
-        
+        """
+        Initialize algorithm
+        :param closure: dict
+        :return loss: float 
+        """
         loss = None
         
         if closure is not None:
